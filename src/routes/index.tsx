@@ -1,4 +1,5 @@
 import { Navigate, useRoutes } from "react-router-dom";
+import AuthGuard from "../guards/AuthGuard";
 import AuthLayout from "../layouts/authLayout/AuthLayout";
 import HomeLayout from "../layouts/homeLayout/HomeLayout";
 import Home from "../pages/home/Home";
@@ -11,6 +12,7 @@ export default function  Router  () {
             path:'/auth',
             element: <AuthLayout/>,
             children:[
+                { element: <Navigate to="/auth/login" replace />, index: true },
                 {
                     path:'/auth/login',
                     element:<Login/>
@@ -20,12 +22,13 @@ export default function  Router  () {
         },
         {
             path:'/',
-            element:<HomeLayout/>,
+            element:<AuthGuard><HomeLayout/></AuthGuard> ,
             children:[
-                { element: <Navigate to="/" replace />, index: true },
+                { element: <Navigate to="/home" replace />, index: true },
                 {path:'/home',element:<Home/>},
             ]
-        }
+        },
+        { path: '*', element: <Navigate to="/home" replace /> },
     ])
 
 }

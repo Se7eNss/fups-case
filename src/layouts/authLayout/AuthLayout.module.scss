@@ -1,0 +1,36 @@
+.main__layout{
+    padding: 16px 16px 0 0;
+    background-color: #fff;
+    height: 100vh;
+
+    &__layout{
+        position: relative;
+        height: auto;
+        .header{
+            background: #fff;
+            position: relative;
+            height: auto;
+        }
+        .content{
+            background: yellow;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            height: auto;
+        }
+    }
+    &__sider{
+        background-color: #fff !important;
+        border-radius: 12px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1100px){
+.main__layout{
+    &__sider{
+        display: none;
+    }
+}
+    
+}

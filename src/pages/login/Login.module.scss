@@ -1,0 +1,27 @@
+.formContainer {
+    margin-top: 12vh;
+    width: 42.2%;
+    background: #fff;
+    
+    &__header {
+        margin-bottom: 0;
+        font-size: 32px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.56px;
+        color: #17171a;
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #606066;
+    }
+}

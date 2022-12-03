@@ -1,0 +1,43 @@
+.label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px white;
+    border-radius: 12px;
+    height: 56px;
+    background-color: #f5f5fa;
+    padding: 10px;
+    &:hover{
+        border: solid 2px #dcdce6 !important;
+        outline: saddlebrown ;
+    }
+    &:required{
+        background-color: #faf5f5;
+        border: solid 2px #f20028;
+    }
+    &:focus{
+        border: solid 2px #155ed4;
+    }
+
+     
+    &__textbox{
+        border:none;
+        outline: none;
+        width: 100%;
+        background-color: #f5f5fa;
+        &:focus{
+            outline: none;
+        }
+        
+    }
+
+    &__span{
+        cursor: pointer;
+    }
+
+    &__placeholder{
+        
+    }
+}
+
+
