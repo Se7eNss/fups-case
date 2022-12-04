@@ -5,3 +5,10 @@
         display: flex;
         justify-content: space-between;
 }
+@media (max-width: 750px){
+        .nav{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        }
+        }

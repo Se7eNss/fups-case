@@ -1,43 +1,71 @@
-.label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 2px white;
-    border-radius: 12px;
+.textbox {
     height: 56px;
+    border-radius: 12px;
     background-color: #f5f5fa;
-    padding: 10px;
-    &:hover{
-        border: solid 2px #dcdce6 !important;
-        outline: saddlebrown ;
-    }
-    &:required{
-        background-color: #faf5f5;
-        border: solid 2px #f20028;
-    }
-    &:focus{
-        border: solid 2px #155ed4;
-    }
+    display: flex;
+    align-items: center;
+    position: relative;
 
-     
-    &__textbox{
-        border:none;
-        outline: none;
+    &__input {
         width: 100%;
+        height: 100%;
         background-color: #f5f5fa;
-        &:focus{
-            outline: none;
+        border-radius: 12px;
+        padding:10px 0 0 18px ;
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #17171a;
+        border: 2px solid white;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+        outline: none;
+        &:hover{
+            border: solid 2px #dcdce6;
         }
-        
+
+        &:focus:required:invalid {
+            border: solid 2px #f20028;
+            background-color: #faf5f5;
+          }
+
+        &:focus{
+            border: solid 2px #155ed4;
+        }
+
+        &:focus + .textbox__label, &:not(:placeholder-shown)  + .textbox__label {
+            transform: translate(0, -105%);
+            font-size: 12px;
+        }
+
     }
 
-    &__span{
+
+    &__label {
+        position: absolute;
+        pointer-events: none;
+        top: 20px;
+        left: 20px;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #909099;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+
+    &__icon{
+        position: absolute;
         cursor: pointer;
-    }
-
-    &__placeholder{
-        
+        right: 20px;
     }
 }
-
-

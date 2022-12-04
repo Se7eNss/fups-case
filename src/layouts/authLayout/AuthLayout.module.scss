@@ -11,8 +11,11 @@
             position: relative;
             height: auto;
         }
+        .footer{
+            background: #fff;
+        }
         .content{
-            background: yellow;
+            background: #fff;
             display: flex;
             justify-content: center;
             position: relative;
@@ -31,6 +34,7 @@
     &__sider{
         display: none;
     }
+ 
 }
-    
 }
+

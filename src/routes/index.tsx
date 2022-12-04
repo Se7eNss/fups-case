@@ -1,5 +1,6 @@
 import { Navigate, useRoutes } from "react-router-dom";
 import AuthGuard from "../guards/AuthGuard";
+import GuestGuard from "../guards/GuestGuard";
 import AuthLayout from "../layouts/authLayout/AuthLayout";
 import HomeLayout from "../layouts/homeLayout/HomeLayout";
 import Home from "../pages/home/Home";
@@ -10,7 +11,7 @@ export default function  Router  () {
     return useRoutes([
         {
             path:'/auth',
-            element: <AuthLayout/>,
+            element: <GuestGuard><AuthLayout/></GuestGuard>,
             children:[
                 { element: <Navigate to="/auth/login" replace />, index: true },
                 {

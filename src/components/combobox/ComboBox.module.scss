@@ -1,0 +1,179 @@
+.combobox {
+    position: relative;
+    &__wrapper {
+        height: 56px;
+        border-radius: 12px;
+        background-color: #f5f5fa;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &__input {
+            width: 100%;
+            height: 100%;
+            background-color: #f5f5fa;
+            border-radius: 12px;
+            padding: 20px 0 0 18px;
+            border: 2px solid white;
+            outline: none;
+            cursor: pointer;
+            &__text{
+                font-size: 16px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #17171a;
+                transition: 0.2s ease all;
+                -moz-transition: 0.2s ease all;
+                -webkit-transition: 0.2s ease all;
+            }
+
+
+            &__label {
+                position: absolute;
+                pointer-events: none;
+                top: 20px;
+                left: 20px;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #909099;
+                transition: 0.2s ease all;
+                -moz-transition: 0.2s ease all;
+                -webkit-transition: 0.2s ease all;
+            }
+            &__selectedlabel{
+                position: absolute;
+                pointer-events: none;
+                top: 3px;
+                left: 20px;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #909099;
+                transition: 0.2s ease all;
+                -moz-transition: 0.2s ease all;
+                -webkit-transition: 0.2s ease all;
+            }
+
+            &:hover {
+                border: solid 2px #dcdce6;
+            }
+
+        }
+        .focus{
+            border: solid 2px #155ed4;
+        }
+        .required{
+            border: solid 2px #f20028;
+            background-color: #faf5f5;
+        }
+
+
+        &__icon {
+            position: absolute;
+            cursor: pointer;
+            right: 20px;
+        }
+
+    }
+
+    &__options {
+        position: absolute;
+        z-index: 1000;
+        max-height: 178px;
+        overflow: scroll;
+        width: 100%;
+        padding: 20px 0 0 20px;
+        margin: 8px 0 0 0;
+        background: #ffffff;
+        box-sizing: border-box;
+        color: #606066;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px 0 rgba(20, 20, 51, 0.15);
+        background-color: #fff;
+        list-style: none;
+
+        &__item {
+            position: relative;
+            margin:0px 16px 20px 0;
+            font-size: 16px;
+            color: #606066;
+            padding: 4px 20px 0px 40px;
+            cursor: pointer;
+            &__hr{
+                margin-top: 20px;
+                height: 1px;
+                background-color: #f5f5fa;
+                border: none;
+            }
+            &:hover::before {
+                box-shadow: 0 0 0 4px rgba(192, 192, 204, 0.16), inset 0 0 0 2px #dcdce6;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: 0;
+                top: 0;
+                border-radius: 150px;
+                border: solid 2px #dcdce6;
+                background-color: #fff;
+                transition: 0.2s ease all;
+                    -moz-transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+
+            }
+
+
+
+
+
+            &_active {
+                position: relative;
+                margin: 0px 16px 20px 0;
+                font-size: 16px;
+                color: #606066;
+                padding: 4px 20px 0px 40px;
+                cursor: pointer;
+                transition: 0.2s ease all;
+                    -moz-transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+                &__hr{
+                    margin-top: 20px;
+                    height: 1px;
+                    background-color: #f5f5fa;
+                    border: none;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    left: 0;
+                    top: 0;
+                    border-radius: 150px;
+                    border: solid 7px #155ed4;
+                    background-color: #fff;
+
+                }
+            }
+
+           
+        }
+    }
+
+
+}

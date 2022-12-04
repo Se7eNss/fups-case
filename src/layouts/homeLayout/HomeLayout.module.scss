@@ -1,0 +1,13 @@
+.layout{
+    padding: 24px 40px 159px 40px;
+    background-color: #f5f5fa;
+    .navbar{
+        padding: 0;
+        position: relative;
+        background-color: #f5f5fa;
+    }
+    &__content{
+        position: relative;
+        height: auto;
+    }
+}

@@ -7,26 +7,23 @@ const AuthContext = React.createContext<AuthContextType | null>(null);
 const AuthProvider = ({ children }:AuthContextProps) => {
 
     const [user,setUser] = useLocalStorage('user',null)
-    const [isAuthenticated, setisAuthenticated] = useState(false)
 
     useEffect(() => {
-        window.localStorage.getItem(user) != null && setisAuthenticated(true)
+        window.localStorage.getItem(user) 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
 
-    const login = (data:LoginData) =>{
+    const login = async (data:LoginData) =>{
         setUser(data)
     }
     const logout = ()=>{
         setUser(null)
-        setisAuthenticated(false)
     }
 
     
     const value = useMemo(() => ({
         user,
-        isAuthenticated,
         login,
         logout
     // eslint-disable-next-line react-hooks/exhaustive-deps

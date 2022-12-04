@@ -1,9 +1,22 @@
+import { Layout } from 'antd';
 import React from 'react'
+import styles from './HomeLayout.module.scss'
 import { Outlet } from 'react-router-dom'
+import Navbar from './navbar/Navbar';
+
 
 const HomeLayout = () => {
+  const { Header, Content} = Layout;
   return (
-    <Outlet />
+    <Layout className={styles.layout}>
+      <Header className={styles.navbar}>
+            <Navbar/>
+        </Header>
+        <Content className={styles.content}>
+            <Outlet />
+        </Content>
+    </Layout>
+    
   )
 }
 

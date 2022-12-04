@@ -9,6 +9,7 @@ export interface LoginData  {
 export interface User {
     username:string,
     userType:string,
+    password:string,
 }
 
 export type AuthContextProps= {
@@ -16,8 +17,8 @@ export type AuthContextProps= {
 }
 
 export type  AuthContextType = {
-    isAuthenticated:boolean,
-    user:User | null,
+    user:User | null, 
     login: (data:LoginData) => void,
+    logout: ()=>void
 }
 
