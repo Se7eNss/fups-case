@@ -1,0 +1,44 @@
+.slide {
+    display: flex;
+    border-radius: 12px;
+    background-color: #fff;
+    position: relative;
+    width: 324px;
+    height: 160px;
+
+    &__img {
+       position: absolute;
+       left: 0;
+       top: -10px;
+    
+
+    }
+
+    &__info {
+        margin-left: 103px;
+        padding: 38px 4px 10px 0;
+
+        &__header {
+            margin: 0;
+            width: auto;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            color: #17171a;
+        }
+
+        &__text {
+            margin: 10px 0 0 0;
+            font-weight: 500;
+            font-size: 14px;
+            color: #606066;
+        }
+    }
+    &__icon{
+        background: #f5f5fa;
+        border-radius: 12px;
+        height: 12px;
+        align-self: flex-end;
+        margin: 0 14px 14px 0;
+    }
+}

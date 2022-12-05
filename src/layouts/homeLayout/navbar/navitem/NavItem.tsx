@@ -4,10 +4,12 @@ import styles from './NavItem.module.scss'
 interface NavItemProps {
     isDropdown: boolean,
     title: string,
-    icon: string
+    icon: string,
+    dropItems:{title:string,link:string}[] | null,
 }
 
-const NavItem = ({ isDropdown, title, icon }: NavItemProps) => {
+const NavItem = ({ isDropdown, title, icon, dropItems }: NavItemProps) => {
+
     return (
         <>
             <li className={styles.navItem}>
@@ -16,13 +18,12 @@ const NavItem = ({ isDropdown, title, icon }: NavItemProps) => {
 
                 {isDropdown &&
                     <ul className={styles.navItem__dropdown}>
-                        <li className={styles.navItem__dropdown__item}>Menu 1</li>
-                        <li className={styles.navItem__dropdown__item}>Menu 2</li>
-                        <li className={styles.navItem__dropdown__item}>Menu 3</li>
-                        <li className={styles.navItem__dropdown__item}>Menu 4</li>
-                        <li className={styles.navItem__dropdown__item}>Menu 5</li>
-                        <li className={styles.navItem__dropdown__item}>Menu 6</li>
-                        <li className={styles.navItem__dropdown__item}>Menu 7</li>
+                        {dropItems?.map(item =>(
+                             <li key={item.title}  className={styles.navItem__dropdown__item }>{item.title}</li>
+                        ))}
+                                
+                       
+                            
                     </ul>
                 }
             </li>

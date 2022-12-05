@@ -9,7 +9,7 @@ const HomeLayout = () => {
   const { Header, Content} = Layout;
   return (
     <Layout className={styles.layout}>
-      <Header className={styles.navbar}>
+      <Header className={styles.header}>
             <Navbar/>
         </Header>
         <Content className={styles.content}>
