@@ -1,0 +1,133 @@
+.pager {
+    width: 100%;
+    margin-top: 16px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        margin-bottom:24px ;
+
+        &__title {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            color: #17171a;
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+
+            &__text {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 0.2px;
+                color: #155ed4;
+            }
+            img{
+                color:#155ed4;
+            }
+        }
+
+    }
+
+    &__wrapper {
+        border-radius: 12px;
+        background-color: #fff;
+        padding-bottom: 20px;
+        
+    }
+    .custom__dots{
+        display: inline-block;
+        vertical-align: middle;
+        margin:24px 0 4px 0 ;
+        padding: 0;
+        background: #fff;
+        border-radius: 10px;
+        width:100%;
+        text-align: center;
+        :global(.slick-active button) {
+            background-color: #155ed4;
+          }
+        li {
+            list-style: none;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 5px;
+            padding: 0;
+            .dot{
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                display: block;
+                width: 32px;
+                height: 32px;
+                border-radius: 12px;
+              }
+              
+            }
+      
+    }
+  
+    
+}
+
+@media (max-width:500px){
+    .pager {
+        &__header {
+    
+            &__title {
+                margin: 0;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 0.2px;
+                color: #17171a;
+            }
+    
+            &__link {
+                display: flex;
+                align-items: center;
+    
+                &__text {
+                    margin: 0;
+                    font-size: 13px;
+                    font-weight: 600;
+                    letter-spacing: 0.2px;
+                    color: #155ed4;
+                }
+                img{
+                    height: 14px;
+                    color:#155ed4;
+                }
+            }
+    
+        }
+    
+        &__wrapper {
+            border-radius: 12px;
+            background-color: #fff;
+            padding-bottom: 20px;
+            
+        }
+        .custom__dots{
+            li {
+                .dot{
+                    border: none;
+                    padding: 0;
+                    cursor: pointer;
+                    display: block;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 5px;
+                  }
+                  
+                }
+          
+        }
+      
+        
+    }
+}

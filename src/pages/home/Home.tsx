@@ -1,9 +1,14 @@
 import React from 'react'
-import Slider from '../../sections/home/slider/Slider'
+import Pager from '../../sections/home/pager/Pager'
+import Carousel from '../../sections/home/slider/Carousel'
 
 const Home = () => {
   return (
-    <Slider/>
+    <div>
+        <Carousel/>
+        <Pager/>
+    </div>
+    
   )
 }
 
