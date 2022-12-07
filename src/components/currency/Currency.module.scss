@@ -68,3 +68,114 @@
         }
     }
 }
+
+@media (max-width:1250px){
+    .currency {  
+        margin-left: 15px;
+        padding: 0 15px 0 0px;
+        border-right: solid 1px #f5f5fa;
+        &:nth-child(1){
+            margin-left: 0px;
+            padding: 0 15px 0 0px;
+        }
+        &:nth-child(4){
+            border: none;
+        }
+    
+        &__rateWrapper {
+            &__rate {
+                margin: 0;
+                font-size: 20px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 0.37px;
+                text-align: right;
+                color: #17171a;
+            }
+        }
+    }
+    
+    
+}
+
+@media (max-width:950px){
+    .currency {  
+        margin-left: 0px;
+        padding: 0 15px 0 0px;
+        border-right: solid 1px #f5f5fa;
+        &:nth-child(1){
+            margin-left: 0px;
+            padding: 0 15px 0 0px;
+        }
+        &:nth-child(2){
+            border: none;
+        }
+
+
+    
+        &__rateWrapper {
+            &__rate {
+                margin: 0;
+                font-size: 20px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 0.37px;
+                text-align: right;
+                color: #17171a;
+            }
+        }
+    }
+    
+    
+}
+
+
+@media (max-width:600px){
+    .currency {  
+        margin-left: 0px;
+        padding: 0 15px 0 0px;
+        border-right: none;
+        &:nth-child(1){
+            border: none;
+        }
+
+
+    
+        &__infoWrapper {
+        
+    
+            &__icon {
+                height: 25px;
+                width: 25px;      
+            }
+    
+            &__info {
+                display: flex;
+                flex-direction: column;
+    
+                &__title {
+           
+                    font-size: 12px;
+                
+                }
+    
+                &__text {
+                    font-size: 10px;
+                    
+                }
+            }
+        }
+    
+        &__rateWrapper {
+            &__rate {
+                font-size: 16px;
+            }
+        }
+    }
+    
+    
+}

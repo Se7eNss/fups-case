@@ -1,18 +1,26 @@
 import React from 'react'
 import styles from './Currency.module.scss'
 
-const Currency = () => {
+interface CurrencyProps{
+    icon:string,
+    title:string,
+    rise:string,
+    curr:string,
+    color:string
+}
+
+const Currency = ({icon,title,rise,curr,color}:CurrencyProps) => {
   return (
     <div className={styles.currency}>
         <div className={styles.currency__infoWrapper}>
-            <img className={styles.currency__infoWrapper__icon} src="/assets/icons/icon-36-thumb-dollar.svg" alt="dollar" />
+            <img style={{background:color}} className={styles.currency__infoWrapper__icon} src={`/assets/icons/${icon}.svg`}  alt={title} />
             <div className={styles.currency__infoWrapper__info}>
-                <h5 className={styles.currency__infoWrapper__info__title}>sds </h5>
-                <p className={styles.currency__infoWrapper__info__text}> sds</p>
+                <h5 className={styles.currency__infoWrapper__info__title}>{title}</h5>
+                <p className={styles.currency__infoWrapper__info__text}> {rise.substring(0,5)}</p>
             </div>
         </div>
         <div className={styles.currency__rateWrapper}>
-            <h2 className={styles.currency__rateWrapper__rate}> 122344 </h2>
+            <h2 className={styles.currency__rateWrapper__rate}> {curr} </h2>
         </div>
     </div>
   )

@@ -6,3 +6,23 @@
     background-color: #fff;
     margin: 50px 0 50px 0;
 }
+
+@media (max-width:950px){
+    .currencyTab{
+        display: grid;
+        grid-template-rows:    repeat(2, 2fr);
+        grid-template-columns: repeat(2, 2fr);
+        gap:25px
+    }
+    
+}
+
+@media (max-width:600px){
+    .currencyTab{
+        display: grid;
+        grid-template-rows:    repeat(1, 2fr);
+        grid-template-columns: repeat(1, 2fr);
+        gap:25px
+    }
+    
+}

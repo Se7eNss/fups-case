@@ -1,7 +1,9 @@
 .footer{
+    
+    background-color: #fff;
     &__img{
         position: absolute;
-        bottom: 0;
+        bottom: -16px;
         left: 0;
     }
 }
@@ -16,9 +18,5 @@
         }
     }
 }
-@media (max-height:800px){
-    .footer{
-        display: none;
-       
-    }
-}
+
+

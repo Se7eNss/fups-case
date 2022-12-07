@@ -40,3 +40,30 @@
         color: #17171a;
     }
 }
+
+
+@media (max-width:750px){
+    .button {
+        padding: 15px 25px;
+        .span {
+            font-size: 12px;
+        }
+    }
+    
+    .button:hover {
+        background-color: #4085e6;
+    }
+    
+    
+    .button:disabled {
+        
+        padding: 10px 20.5px;
+        border-radius: 12px;
+
+    
+        .span {
+            font-size: 12px;
+
+        }
+    }
+}

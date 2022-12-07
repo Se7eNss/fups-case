@@ -1,11 +1,11 @@
 .info__container {
-    height: 98.3%;
+    height: 888px;
     background-color: #17171a;
     padding: 76px 0 0;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    ;
+    gap:66px;
 
     .info__wrapper {
         display: flex;
@@ -52,16 +52,11 @@
     }
 
     .image__wrapper {
-        position: absolute;
-        bottom: 1.2vh;
-        left: 0;
+        position: relative;
+        border-radius: 12px;
+        
         overflow: hidden;
-        object-fit: cover;
-        img {
-            margin-top: 20px;
-           height: 100%;
-
-        }
+       
     }
 }
 
