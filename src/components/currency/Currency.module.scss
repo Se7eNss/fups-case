@@ -1,0 +1,70 @@
+.currency {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;   
+    margin-left: 55px;
+    padding: 0 55px 0 0px;
+    border-right: solid 1px #f5f5fa;
+    &:nth-child(1){
+        margin-left: 0px;
+        padding: 0 55px 0 0px;
+    }
+    &:nth-child(4){
+        border: none;
+    }
+
+    &__infoWrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &__icon {
+            background: #000;
+            height: 32.4px;
+            width: 32.4px;
+            border-radius: 32px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 0.2px;
+                color: #17171a;
+            }
+
+            &__text {
+                margin: 0;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #26bf66;
+            }
+        }
+    }
+
+    &__rateWrapper {
+        &__rate {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.37px;
+            text-align: right;
+            color: #17171a;
+        }
+    }
+}

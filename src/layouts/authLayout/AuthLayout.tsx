@@ -1,12 +1,12 @@
 import { Layout } from 'antd';
-import React, { useState } from 'react'
+import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Nav from './nav/Nav';
 import styles from './AuthLayout.module.scss'
 import Info from './infoSection/Info';
 import Foot from './footer/Foot';
 import Loading from '../../components/loading/Loading';
-import useAuth from '../../hooks/useAuth';
+
 
 
 const AuthLayout = () => {

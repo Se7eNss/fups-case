@@ -1,5 +1,4 @@
 import React from 'react'
-import Style from './Nav.module.scss'
 
 const Logo = () => {
     return (
