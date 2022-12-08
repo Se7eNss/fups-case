@@ -1,18 +1,14 @@
+@import '../../mixin.scss';
+
 .button {
     background-color: #155ed4;
     cursor: pointer;
-    padding: 20px 43px;
+    padding: 19px 42px;
     border: none;
     border-radius: 12px;
 
     .span {
-        font-size: 14px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: 0.6px;
-        text-align: center;
+        @include text__normal(0.6px);
         color: #fff;
     }
 }
@@ -30,12 +26,7 @@
     border: solid 2px #dcdce6;
 
     .span {
-        font-size: 14px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: 0.6px;
+        @include text__normal(0.6px);
         text-align: center;
         color: #17171a;
     }
@@ -45,9 +36,6 @@
 @media (max-width:750px){
     .button {
         padding: 15px 25px;
-        .span {
-            font-size: 12px;
-        }
     }
     
     .button:hover {
@@ -60,10 +48,5 @@
         padding: 10px 20.5px;
         border-radius: 12px;
 
-    
-        .span {
-            font-size: 12px;
-
-        }
     }
 }

@@ -1,0 +1,29 @@
+@mixin text__normal($letter_space) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: $letter_space;
+    color: #606066;
+
+    @media (max-width:750px){
+        font-size: 12px;
+    }
+  }
+
+  @mixin text__big($letter_space,$font) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $font;
+    font-weight: 600px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: $letter_space;
+    color: #606066;
+
+    @media (max-width:750px){
+        font-size: $font;
+    }
+  }

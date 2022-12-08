@@ -5,9 +5,11 @@ import TextBox from '../../components/textbox/TextBox'
 import ComboBox from '../../components/combobox/ComboBox'
 import useAuth from '../../hooks/useAuth'
 import { useNavigate } from 'react-router-dom'
+import useLoading from '../../hooks/useLoading'
 
 const LoginForm = () => {
   const {login} = useAuth()
+  const {setIsLoading}=useLoading()
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [selection, setSelection] = useState<string|null>('')
@@ -18,6 +20,9 @@ const LoginForm = () => {
       event?.preventDefault()
       setEmpty(true)
       if(selection !== '' && selection !== null){
+          setIsLoading(true)
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+          setIsLoading(false)
           login({userType:selection,username,password})
           event.target.reset();
           navigate('/')

@@ -1,3 +1,5 @@
+@import '../../mixin.scss';
+
 .textbox {
     height: 56px;
     border-radius: 12px;
@@ -12,13 +14,6 @@
         background-color: #f5f5fa;
         border-radius: 12px;
         padding:10px 0 0 18px ;
-        font-size: 16px;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #17171a;
         border: 2px solid white;
         transition: 0.2s ease all;
         -moz-transition: 0.2s ease all;
@@ -46,16 +41,11 @@
 
 
     &__label {
+        @include text__big(0px,16px);
         position: absolute;
         pointer-events: none;
         top: 20px;
         left: 20px;
-        font-size: 16px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
         color: #909099;
         transition: 0.2s ease all;
         -moz-transition: 0.2s ease all;

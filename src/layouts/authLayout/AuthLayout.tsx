@@ -6,16 +6,16 @@ import styles from './AuthLayout.module.scss'
 import Info from './infoSection/Info';
 import Foot from './footer/Foot';
 import Loading from '../../components/loading/Loading';
+import useLoading from '../../hooks/useLoading';
 
 
 
 const AuthLayout = () => {
   const { Header, Sider, Content,Footer } = Layout;
-
-  //loading düzeltilecek
+  const{loading}=useLoading()
   return (
     <>
-    <Loading isLoading={false}/>
+    <Loading isLoading={loading}/>
     <Layout className={styles.main__layout}>
       <Layout className={styles.main__layout__layout}>
         <Header className={styles.header}>

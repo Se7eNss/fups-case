@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import useAuth from '../../../hooks/useAuth'
+import { useFetchMenu } from '../../../hooks/useFetchMenu'
 import useWindowDimensions from '../../../hooks/useWindowDimensions'
 import styles from './Navbar.module.scss'
 import NavItem from './navitem/NavItem'
-interface NavItemType {
+export interface NavItemType {
     isDropdown: boolean,
     title: string,
     icon: string,
@@ -11,48 +12,16 @@ interface NavItemType {
     dropItems: { title: string, link: string }[] | null,
 }
 
-const dropItems = [{ title: 'Menu 1', link: '#' }, { title: 'Menu 2', link: '#' }, { title: 'Menu 3', link: '#' }, { title: 'Menu 4', link: '#' }, { title: 'Menu 5', link: '#' }, { title: 'Menu 6', link: '#' }, { title: 'Menu 7', link: '#' }]
-
-const NavOption: NavItemType[] = [
-    {
-        isDropdown: true,
-        title: 'Hesaplar',
-        icon: 'icon-36-navigation-account-filled',
-        link: '#',
-        dropItems: dropItems
-    },
-    {
-        isDropdown: false,
-        title: 'Kartlar',
-        icon: 'icon-36-navigation-card-stroke',
-        link: '#',
-        dropItems: null
-    },
-    {
-        isDropdown: false,
-        title: 'İşlemler',
-        icon: 'icon-36-navigation-function-stroke',
-        link: '#',
-        dropItems: null
-    },
-    {
-        isDropdown: false,
-        title: 'Kampanyalar',
-        icon: 'icon-36-navigation-campaigns-filled',
-        link: '#',
-        dropItems: null
-    }
-]
-
 
 const Navbar = () => {
     const { user } = useAuth()
     const [nav, setNav] = useState(false)
 
+   const {data} = useFetchMenu()
+
     const{width}=useWindowDimensions()
     
     useEffect(() => {
-        console.log('errr');
         if(width>1100)setNav(true)
         if(width<1100)setNav(false)
     }, [width])
@@ -68,7 +37,7 @@ const Navbar = () => {
             {nav && 
                 <div className={styles.navbar__nav}>
                 <ul className={styles.navbar__nav__list}>
-                    {NavOption.map((nav: NavItemType) =>
+                    {data?.map((nav: NavItemType) =>
                         <NavItem key={nav.title} dropItems={nav.dropItems} isDropdown={nav.isDropdown} title={nav.title} icon={nav.icon} />
                     )}
 

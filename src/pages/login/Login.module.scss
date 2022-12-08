@@ -1,27 +1,18 @@
+@import '../../mixin.scss';
 .formContainer {
     margin-top: 12vh;
-    width: 42.2%;
+    width: 43.1%;
     
     z-index: 99;
     &__header {
         margin-bottom: 0;
-        font-size: 32px;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: 0.56px;
+        @include text__big(0.56px,32px);
         color: #17171a;
     }
 
     &__text {
         margin-bottom: 32px;
-        font-size: 16px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
+        @include text__big(0px,15px);
         color: #606066;
     }
 }
@@ -39,18 +30,12 @@
         width: 80%;
         &__header {
             margin-bottom: 0;
-            font-size: 26px;
-            font-weight: 600;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: 0.56px;
+            @include text__big(0.56px,26px);
             color: #17171a;
         }
     
         &__text {
             margin-bottom: 32px;
-            font-size: 14px;
         }
     }
 }

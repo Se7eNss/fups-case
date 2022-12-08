@@ -1,3 +1,4 @@
+@import '../../mixin.scss';
 .combobox {
     position: relative;
     &__wrapper {
@@ -36,12 +37,7 @@
                 pointer-events: none;
                 top: 20px;
                 left: 20px;
-                font-size: 16px;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
+                @include text__big(0px,16px);
                 color: #909099;
                 transition: 0.2s ease all;
                 -moz-transition: 0.2s ease all;
