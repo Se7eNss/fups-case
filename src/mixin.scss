@@ -27,3 +27,19 @@
         font-size: $font;
     }
   }
+
+
+  @mixin text($letter_space,$font,$weight) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $font;
+    font-weight: $weight;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: $letter_space;
+    color: #606066;
+
+    @media (max-width:750px){
+        font-size: $font;
+    }
+  }

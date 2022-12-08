@@ -4,10 +4,11 @@ import Lottie from "lottie-react";
 import  * as LoadingAnimation from '../../lotties/loading.json'
 
 interface LoadingProps{
-    isLoading:boolean
+    isLoading:boolean,
+    isLogin:boolean
 }
 
-const Loading = ({isLoading}:LoadingProps) => {
+const Loading = ({isLoading,isLogin}:LoadingProps) => {
     
   return (
     <>
@@ -18,7 +19,7 @@ const Loading = ({isLoading}:LoadingProps) => {
             loop={true}
             animationData={LoadingAnimation}        
         />
-        <p className={styles.loadingContainer__wrapper__text}>GİRİŞ YAPILIYOR...</p>
+        {isLogin && <p className={styles.loadingContainer__wrapper__text}>GİRİŞ YAPILIYOR...</p> } 
         </div>
         
     </div>}

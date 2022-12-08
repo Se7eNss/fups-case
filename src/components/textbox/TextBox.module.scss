@@ -13,6 +13,7 @@
         height: 100%;
         background-color: #f5f5fa;
         border-radius: 12px;
+        @include text(0px,15px,600);
         padding:10px 0 0 18px ;
         border: 2px solid white;
         transition: 0.2s ease all;

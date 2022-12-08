@@ -15,7 +15,7 @@ const AuthLayout = () => {
   const{loading}=useLoading()
   return (
     <>
-    <Loading isLoading={loading}/>
+    <Loading isLogin={true} isLoading={loading}/>
     <Layout className={styles.main__layout}>
       <Layout className={styles.main__layout__layout}>
         <Header className={styles.header}>

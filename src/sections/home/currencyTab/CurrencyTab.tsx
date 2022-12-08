@@ -8,8 +8,6 @@ const CurrencyTab = () => {
   return (
     <div className={styles.currencyTab}>
       {newData.map(d=> <Currency key={d.title} icon={d.icon} title={d.title} change={d.change} curr={d.curr} color={d.color} />)}
-        
-      
     </div>
   )
 }

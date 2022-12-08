@@ -48,12 +48,7 @@
                 pointer-events: none;
                 top: 3px;
                 left: 20px;
-                font-size: 12px;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: normal;
+                @include text__big(0px,12px);
                 color: #909099;
                 transition: 0.2s ease all;
                 -moz-transition: 0.2s ease all;
@@ -103,7 +98,7 @@
         &__item {
             position: relative;
             margin:0px 16px 20px 0;
-            font-size: 16px;
+            @include text__big(0px,16px);
             color: #606066;
             padding: 4px 20px 0px 40px;
             cursor: pointer;

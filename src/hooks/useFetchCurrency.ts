@@ -2,6 +2,7 @@ import axios from "axios";
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { CURRENCY_API, CURRENCY_KEY, GOLD_API, GOLD_API_KEY } from "../config";
+import useLoading from "./useLoading";
 
 
 export interface CurrencyType {
@@ -40,7 +41,7 @@ export const useFetchCurrency = () => {
     const [change, setChange] = useState<GetChangeType | null>();
     const [gold, setGold] = useState<GetGoldType | null>()
     const [error, setError] = useState("");
-
+    const {setIsLoading,loading}= useLoading()
     const date = new Date()
     const today = moment(date).format('YYYY-MM-DD')
     const yesterday = moment().add(-1, 'days').format('YYYY-MM-DD');
@@ -49,6 +50,8 @@ export const useFetchCurrency = () => {
     useEffect(() => {
         (async () => {
             try {
+                
+                setIsLoading(true)
                 const response = await axios.get(`${CURRENCY_API}/fluctuation&start_date=${yesterday}&end_date=${today}&base=TRY&symbols=USD,EUR,GBP`, {
                     headers: { 'apikey': CURRENCY_KEY }
                 });
@@ -59,8 +62,10 @@ export const useFetchCurrency = () => {
                 setData({USD:1/responseCurr.data.rates.USD,EUR:1/responseCurr.data.rates.EUR ,GBP:1/responseCurr.data.rates.GBP});
                 const responseGold = await axios.get(`${GOLD_API}/getCurrencyDetails?code=gram-altin`,{headers:{'Authorization':GOLD_API_KEY}});
                 setGold(responseGold.data.data[0])
-                
+                setIsLoading(false)
             } catch (error: any) {
+                setIsLoading(false)
+                alert('Sunucuda problem var. Lütfen daha sonra tekrar deneyiniz!!')
                 setError(error.message);
             }
         })();

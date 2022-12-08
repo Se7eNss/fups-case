@@ -31,7 +31,22 @@ const slides=[
     image:'image-banner-showcase-01',
     header:'TURKCELL KAMPANYASI',
     text:'Fatura ödemelerinizde her ay 10 TL kazan dilediğince harca.'
-  }
+  },
+  {
+    image:'image-banner-showcase-01',
+    header:'TURKCELL KAMPANYASI',
+    text:'Fatura ödemelerinizde her ay 10 TL kazan dilediğince harca.'
+  },
+  {
+    image:'image-banner-showcase-02',
+    header:'OYUN & E-PIN FIRSATI',
+    text:'Tüm alışverişlerinizde %20 bonus kazanma fırsatını kaçırma.'
+  },
+  {
+    image:'image-banner-showcase-03',
+    header:'TURKCELL KAMPANYASI',
+    text:'Fups App`i hemen indir! Ücretsiz işlem fırsatından sende yararlan.'
+  },
 ]
 
 
@@ -54,6 +69,24 @@ const Carousel = () => {
     dotsClass: styles.custom__arrows,
     responsive: [
       {
+        breakpoint: 2200,
+        settings: {
+          slidesToShow: 5.09,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1900,
+        settings: {
+          slidesToShow: 4.07,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
         breakpoint: 1394,
         settings: {
           slidesToShow: 3.09,
@@ -66,6 +99,15 @@ const Carousel = () => {
         breakpoint: 1200,
         settings: {
           slidesToShow: 2.5,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2.2,
           slidesToScroll: 2,
           infinite: true,
           dots: true

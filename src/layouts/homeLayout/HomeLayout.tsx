@@ -3,12 +3,17 @@ import React from 'react'
 import styles from './HomeLayout.module.scss'
 import { Outlet } from 'react-router-dom'
 import Navbar from './navbar/Navbar';
+import useLoading from '../../hooks/useLoading';
+import Loading from '../../components/loading/Loading';
 
 
 const HomeLayout = () => {
   const { Header, Content} = Layout;
+  const {loading}=useLoading()
   return (
-    <Layout className={styles.layout}>
+  <>
+  <Loading isLogin={false} isLoading={loading}/>
+  <Layout className={styles.layout}>
       <Header className={styles.header}>
             <Navbar/>
         </Header>
@@ -16,6 +21,8 @@ const HomeLayout = () => {
             <Outlet />
         </Content>
     </Layout>
+  </>
+    
     
   )
 }

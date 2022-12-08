@@ -1,3 +1,4 @@
+@import '../../../../mixin.scss';
 .navItem {
     position: relative;
     cursor: pointer;
@@ -7,14 +8,13 @@
     padding: 0 22px 0 12px;
     margin-left: 8px;
     height: 100%;
-    gap: 17px;
+    gap: 16px;
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
 
     &__text {
-
-        font-size: 14px;
+        @include text(0px, 14px,500);
         color: #17171a;
     }
 
@@ -46,9 +46,9 @@
             width: 100%;
             display: flex;
             align-items: center;
-            font-size: 16px;
+            @include text__big(0px, 14px);
             line-height: 1.5;
-            letter-spacing: normal;
+           
             color: #939399;
             transition: 0.2s ease all;
             -moz-transition: 0.2s ease all;
@@ -116,7 +116,7 @@
             &__item {
                 height: 24px;
                 width: 100%;
-                font-size: 14px;
+                font-size: 12px;
                 padding: 0;
                 line-height: 1.5;
                 color: #939399;

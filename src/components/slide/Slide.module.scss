@@ -52,10 +52,23 @@
         position: relative;
         width: 90%;
         height: 160px;
-        margin: 10px  185px;
+        margin: 10px  230px;
 
     }
 }
+@media (max-width:1000px){
+    .slide {
+        display: flex;
+        border-radius: 12px;
+        background-color: #fff;
+        position: relative;
+        width: 90%;
+        height: 160px;
+        margin: 10px  190px;
+
+    }
+}
+
 
 @media (max-width:770px){
     .slide {
