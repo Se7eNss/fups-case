@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import PagerElement from '../../../components/pagerElement/PagerElement'
+import { useFetchExpenses } from '../../../hooks/useFetchExpenses'
 import styles from './Pager.module.scss'
 
 
@@ -82,6 +83,8 @@ const expenses = [
 
 
 const Pager = () => {
+    const {data}= useFetchExpenses()
+    
     const settings = {
         dots: true,
         infinite: false,
@@ -106,7 +109,7 @@ const Pager = () => {
             </div>
             <div className={styles.pager__wrapper}>
             <Slider {...settings}>
-                {expenses.map(expense => 
+                {data?.map(expense => 
                 <PagerElement key={expense.title} icon={expense.icon} title={expense.title} account={expense.account} amount={expense.amount} time={expense.time} color={expense.color} />
                 )}
             </Slider>    
